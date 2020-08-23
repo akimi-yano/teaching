@@ -1,0 +1,3 @@
+<div class="{% if request.session.total_gold < 0 %}red-text{%endif%}">
+    <h4>Your Gold: <span> {{ request.session.total_gold }} </span></h4>
+</div>
