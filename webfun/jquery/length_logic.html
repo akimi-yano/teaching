@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form>
+        <input class = "name" name = first_name/>
+        <button type = "submit">SUBMIT</button>
+    </form>
+
+    <script>
+    $( "form" ).submit(function( event ) {
+        var name_length = $("input.name").val().length;
+            if(name_length==0) {
+                alert( "Please input your name before submitting!" );
+                event.preventDefault();
+                return false;
+            }
+    });
+    </script>
+</body>
+</html>
